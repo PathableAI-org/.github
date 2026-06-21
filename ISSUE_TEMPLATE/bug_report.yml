@@ -1,0 +1,118 @@
+name: Bug or accessibility report
+description: Report a reproducible defect, documentation problem, or accessibility barrier.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve this project.
+
+        **Do not include protected health information, participant or customer
+        information, production data, credentials, private logs, or security
+        vulnerability details.**
+
+        Use clearly synthetic data in examples and screenshots. Security
+        vulnerabilities must not be reported through a public issue.
+
+  - type: dropdown
+    id: report-type
+    attributes:
+      label: Report type
+      description: Select the option that best describes the problem.
+      options:
+        - Software defect
+        - Accessibility barrier
+        - Documentation problem
+        - Regression
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: affected-area
+    attributes:
+      label: Affected project or area
+      description: Identify the repository, package, page, component, command, or document.
+      placeholder: "Example: documentation setup guide"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior without including sensitive information.
+      placeholder: Tell us what you encountered.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: Describe the behavior or outcome you expected.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: How can we reproduce or locate the problem?
+      description: |
+        Provide minimal steps, a documentation location, or a synthetic example.
+        Do not paste production records, private logs, credentials, or customer data.
+      placeholder: |
+        1. Start from...
+        2. Perform...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: accessibility-context
+    attributes:
+      label: Accessibility context
+      description: |
+        If this is an accessibility barrier, describe the task you were attempting
+        and what prevented or complicated completion. Include assistive technology,
+        browser, input method, or operating system only when useful.
+
+        You do not need to disclose a disability, diagnosis, or medical information.
+      placeholder: Optional unless relevant to the report.
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or revision
+      description: Provide a release, package version, commit, or documentation date when known.
+      placeholder: "Example: v0.3.0 or commit abc123"
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include only technical details relevant to reproduction.
+      placeholder: |
+        - Operating system:
+        - Browser or runtime:
+        - Relevant package versions:
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: |
+        Add other useful, non-sensitive details. Ensure screenshots and attachments
+        contain only synthetic or public information.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I searched existing issues for a related report.
+          required: true
+        - label: This report contains no PHI, customer data, credentials, production data, or private logs.
+          required: true
+        - label: This report does not disclose a security vulnerability.
+          required: true

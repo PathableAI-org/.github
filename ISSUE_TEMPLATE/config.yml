@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Support and usage guidance
+    url: https://github.com/PathableAI-org/.github/blob/main/SUPPORT.md
+    about: Review support boundaries and find the appropriate channel before opening an issue.
