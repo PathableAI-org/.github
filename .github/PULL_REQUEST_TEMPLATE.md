@@ -68,3 +68,41 @@ appropriate.
 
 ```text
 Add commands and results here.
+```
+
+### Manual Verification
+
+<!-- Describe the scenarios, states, or workflows tested manually. -->
+
+-
+
+## Screenshots Or Recordings
+
+<!-- Include only when useful. Use synthetic data and exclude private information. -->
+
+Not applicable.
+
+## Deployment, Migration, And Rollback
+
+<!-- Describe configuration changes, migrations, feature flags, and rollback steps. -->
+
+## Known Limitations And Follow-Up Work
+
+<!-- Document deferred work, residual risks, or known limitations. -->
+
+## Reviewer Focus
+
+<!-- Point reviewers toward the highest-risk or most uncertain parts. -->
+
+## Author Checklist
+
+- [ ] I followed repository-specific contributor and agent instructions.
+- [ ] The change is focused and excludes unrelated refactoring.
+- [ ] Tests were added or updated in proportion to the change's risk.
+- [ ] Documentation was updated where behavior or usage changed.
+- [ ] Accessibility implications were reviewed.
+- [ ] Privacy, security, and sensitive-data implications were reviewed.
+- [ ] Breaking changes, migrations, and rollout requirements are documented.
+- [ ] Examples, fixtures, screenshots, and test data are synthetic.
+- [ ] AI-assisted work was reviewed, understood, and verified.
+- [ ] I identified any checklist item that is not applicable.
