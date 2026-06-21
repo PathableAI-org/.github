@@ -1,0 +1,117 @@
+name: Feature or improvement request
+description: Propose an improvement based on a user need, workflow, or expected outcome.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing an improvement.
+
+        Describe the need without including protected health information,
+        participant or customer information, production data, credentials,
+        private communications, or confidential implementation details.
+
+        Feature requests are reviewed as capacity and project direction allow.
+        Submission does not imply a commitment or delivery date.
+
+  - type: input
+    id: affected-area
+    attributes:
+      label: Affected project or area
+      description: Identify the repository, package, workflow, page, component, or documentation area.
+      placeholder: "Example: contributor documentation"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem or opportunity does this address?
+      description: |
+        Describe the underlying need before proposing a particular implementation.
+        Use generalized roles and synthetic examples.
+      placeholder: Explain what is difficult, missing, inefficient, or inaccessible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: audience
+    attributes:
+      label: Who would benefit?
+      description: |
+        Describe the relevant user, contributor, maintainer, or technical stakeholder.
+        Do not identify a real participant, customer, or employee.
+      placeholder: "Example: contributors using assistive technology"
+    validations:
+      required: true
+
+  - type: textarea
+    id: workflow
+    attributes:
+      label: What workflow or task is affected?
+      description: Describe what someone is trying to accomplish and where the need occurs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: What should become possible or improve?
+      description: Describe the desired outcome or changed state.
+      placeholder: Explain what success would look like without prescribing every implementation detail.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-approach
+    attributes:
+      label: Proposed approach
+      description: Share an implementation idea if you have one. Alternative approaches are welcome.
+      placeholder: Optional.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or workarounds considered
+      description: Describe existing workarounds or other approaches you considered.
+      placeholder: Optional.
+
+  - type: textarea
+    id: accessibility-agency
+    attributes:
+      label: Accessibility, agency, and human impact
+      description: |
+        Describe how this proposal could affect accessibility, human judgment,
+        privacy, autonomy, workload, or meaningful participation.
+      placeholder: Note positive effects, possible harms, or areas requiring review.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Suggested scope and non-goals
+      description: Identify a useful first increment and anything that should remain out of scope.
+      placeholder: Optional, but helpful for larger proposals.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: |
+        Add public references, diagrams, or synthetic examples when useful.
+        Ensure attachments contain no sensitive or identifying information.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I searched existing issues for a related request.
+          required: true
+        - label: This request contains no PHI, customer data, credentials, production data, or confidential information.
+          required: true
+        - label: This is not a security report or customer-support request.
+          required: true
+        - label: I understand that submission does not guarantee acceptance or a delivery date.
+          required: true
