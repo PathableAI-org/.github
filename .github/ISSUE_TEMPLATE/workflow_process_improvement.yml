@@ -1,0 +1,171 @@
+name: Workflow or process improvement
+description: Propose changes to the open source operating model, templates, or automation.
+title: "[Process]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to propose improvements to Pathable's **open source operating
+        model** — release definitions, milestone docs, GitHub Milestones, Spec Kit
+        workflow, issue and PR templates, Changesets, Changesets CI, branching policy,
+        contributor documentation, or agent instructions.
+
+        **This is not the right form for product features, defects, or accessibility
+        issues.** Use the
+        [feature request](.github/ISSUE_TEMPLATE/feature_request.yml) or
+        [bug report](.github/ISSUE_TEMPLATE/bug_report.yml) templates instead.
+
+        For workflow context, see the
+        [Open Source Operating Model](https://github.com/PathableAI-org/.github/blob/main/CONTRIBUTING.md#open-source-operating-model)
+        in `CONTRIBUTING.md`.
+
+        Do not include protected health information, participant or customer
+        information, production data, credentials, private communications, or
+        confidential implementation details.
+
+  - type: dropdown
+    id: workflow-area
+    attributes:
+      label: Area of workflow affected
+      description: Select the primary part of the operating model this proposal changes.
+      options:
+        - Release definitions
+        - Milestone documents
+        - GitHub Milestones
+        - Spec Kit workflow
+        - Issue templates
+        - PR template
+        - Changesets
+        - Changesets CI
+        - Branching / prerelease policy
+        - Contributor documentation
+        - Agent instructions
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: pain-point
+    attributes:
+      label: Current pain point or ambiguity
+      description: |
+        Describe what is unclear, inconsistent, missing, or difficult today.
+        Focus on process and workflow, not a product capability gap.
+      placeholder: |
+        Example: Contributors are unsure when to open a changeset versus when to
+        update milestone docs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: Proposed change
+      description: |
+        Describe the workflow, template, documentation, or automation change you
+        recommend. Include enough detail for maintainers to evaluate scope.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repositories-affected
+    attributes:
+      label: Repositories affected
+      description: |
+        List the open source repositories this change would touch, or write
+        `all Pathable open source repositories` if it is organization-wide.
+      placeholder: |
+        Example: PathableAI-org/.github, PathableAI-org/specable
+    validations:
+      required: true
+
+  - type: dropdown
+    id: org-github-changes
+    attributes:
+      label: Requires org `.github` changes?
+      description: |
+        Does this proposal require updates to the organization-wide
+        [PathableAI-org/.github](https://github.com/PathableAI-org/.github)
+        repository?
+      options:
+        - "Yes — templates, defaults, or org-wide docs must change"
+        - "No — project repositories only"
+        - "Unsure — needs maintainer review"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: repo-local-changes
+    attributes:
+      label: Requires repo-local changes?
+      description: |
+        Would individual project repositories need their own workflow, docs,
+        CI, or template updates?
+      options:
+        - "Yes — each affected repo needs local changes"
+        - "No — org defaults are sufficient"
+        - "Optional — repos may adopt gradually"
+        - "Unsure — needs maintainer review"
+    validations:
+      required: true
+
+  - type: textarea
+    id: contributor-impact
+    attributes:
+      label: Impact on contributors
+      description: |
+        How would this change affect contributors, maintainers, or reviewers?
+        Note onboarding, review burden, traceability, or documentation effects.
+    validations:
+      required: true
+
+  - type: textarea
+    id: automation-impact
+    attributes:
+      label: Impact on automation or CI
+      description: |
+        Describe effects on GitHub Actions, Changesets CI, release automation,
+        bots, or other workflow tooling. Write `None` if not applicable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: migration-backfill
+    attributes:
+      label: Migration or backfill needs
+      description: |
+        Would existing milestones, issues, specs, changesets, or docs need
+        migration, relabeling, or manual cleanup? Write `None` if not applicable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe other approaches you considered and why you prefer this proposal.
+      placeholder: Optional.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: |
+        Add links to related issues, pull requests, milestone docs, or public
+        references when useful.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: |
+            This proposal improves workflow or process, not a product feature or
+            software defect.
+          required: true
+        - label: I searched existing issues for a related process proposal.
+          required: true
+        - label: |
+            This issue contains no PHI, customer data, credentials, production
+            data, or confidential information.
+          required: true
