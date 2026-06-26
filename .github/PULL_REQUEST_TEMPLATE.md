@@ -23,13 +23,36 @@ change. Explain why the change matters, not only what the code does.
 
 -
 
-## Linked Work
+## Planning And Traceability
 
-<!-- Link relevant issues, decisions, specifications, or design artifacts. -->
+<!--
+Link this pull request back to the planning chain when applicable. For
+documentation, process, or infrastructure changes that are not tied to a
+milestone, write "Not applicable" and briefly explain.
+-->
 
 - GitHub issue:
-- Planning or decision record:
-- Design or specification:
+- GitHub Milestone:
+- Release document:
+- Milestone document:
+- Spec Kit spec / plan / task:
+
+### Spec Workflow
+
+- [ ] This PR implements work from a Spec Kit task.
+- [ ] Spec, plan, or task links are included above.
+- [ ] Spec update not needed; reason documented above.
+
+### Changeset Status
+
+- [ ] Added a changeset because this changes user-visible behavior.
+- [ ] No changeset needed because this is internal-only, test-only, CI-only, or otherwise not release-note-worthy.
+
+## Documentation Updates
+
+<!-- List updated doc paths, or write "None". -->
+
+-
 
 ## User And Workflow Impact
 
@@ -60,7 +83,7 @@ behavior, and cognitive accessibility. Explain why this is not applicable when
 appropriate.
 -->
 
-## Verification
+## Testing Performed
 
 ### Automated Checks
 
