@@ -16,6 +16,7 @@ Its root README is written for maintainers. The public-facing organization profi
 | `SUPPORT.md` | Support boundaries | May become the default for repositories without their own version |
 | `.github/ISSUE_TEMPLATE/` | Issue forms and templates | May be offered across repositories without local templates |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Pull request guidance | May become the default where no local template exists |
+| `templates/docs/` | Release and milestone planning templates | Copied into project repos under `docs/releases/` and `docs/milestones/` |
 | `workflow-templates/` | Reusable GitHub Actions workflows | Available to repositories in the organization |
 
 ## Organization-wide defaults
