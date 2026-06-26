@@ -1,0 +1,125 @@
+name: Spec Kit setup
+description: Start a milestone by creating or updating the Spec Kit spec, plan, and tasks.
+title: "Create Spec Kit spec, plan, and tasks for "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this issue as the **first issue** for a GitHub Milestone.
+
+        It starts the Spec Kit workflow for a demoable vertical slice. Read the
+        parent release definition and milestone definition, then produce or
+        update the Spec Kit feature spec, implementation plan, and task list
+        before opening implementation issues for this milestone.
+
+        The milestone document's **`Inputs to Spec Kit`** section is the
+        **canonical** source for `/speckit.specify`. Use the rest of the
+        milestone document as supporting context only.
+
+        Do not open implementation issues for this milestone until the Spec Kit
+        feature spec, implementation plan, and task breakdown exist.
+
+        For workflow context, see the
+        [Open Source Operating Model](https://github.com/PathableAI-org/.github/blob/main/CONTRIBUTING.md#open-source-operating-model)
+        and the organization-wide
+        [milestone template](https://github.com/PathableAI-org/.github/blob/main/templates/docs/milestones/milestone-template.md).
+        For Spec Kit command semantics, see
+        [github/spec-kit](https://github.com/github/spec-kit).
+
+        Do not include protected health information, participant or customer
+        information, production data, credentials, private communications, or
+        confidential implementation details.
+
+  - type: input
+    id: milestone-name
+    attributes:
+      label: Milestone name
+      description: Short name for the vertical slice this setup issue covers.
+      placeholder: "Example: local project roots"
+    validations:
+      required: true
+
+  - type: input
+    id: release-doc-path
+    attributes:
+      label: Release document path
+      description: Repo-relative path to the parent release definition.
+      placeholder: "Example: docs/releases/alpha.md"
+    validations:
+      required: true
+
+  - type: input
+    id: milestone-doc-path
+    attributes:
+      label: Milestone document path
+      description: Repo-relative path to the milestone definition for this slice.
+      placeholder: "Example: docs/milestones/local-project-roots.md"
+    validations:
+      required: true
+
+  - type: input
+    id: github-milestone
+    attributes:
+      label: GitHub Milestone link or name
+      description: Link to the GitHub Milestone or its exact title in this repository.
+      placeholder: "Example: Local project roots or https://github.com/org/repo/milestone/1"
+    validations:
+      required: true
+
+  - type: input
+    id: spec-kit-output-path
+    attributes:
+      label: Intended Spec Kit output path
+      description: Directory where this milestone's spec, plan, and tasks should live.
+      placeholder: "Example: specs/001-local-project-roots/"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: clarify-required
+    attributes:
+      label: Is /speckit.clarify expected before planning?
+      description: Clarify resolves ambiguity in the feature spec before /speckit.plan.
+      options:
+        - "Yes — run /speckit.clarify before /speckit.plan"
+        - "No — Inputs to Spec Kit are sufficient to proceed"
+        - "Decide during setup — run clarify only if ambiguity remains"
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Known constraints or repo-specific instructions
+      description: |
+        Optional product, compatibility, privacy, accessibility, or process
+        constraints that should guide Spec Kit planning.
+      placeholder: Optional.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: |
+            The milestone document includes a complete `Inputs to Spec Kit`
+            section suitable for `/speckit.specify`.
+          required: true
+        - label: |
+            This issue contains no PHI, customer data, credentials, production
+            data, or confidential information.
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Workflow checklist
+
+        - [ ] Read the release definition.
+        - [ ] Read the milestone definition.
+        - [ ] Use the milestone document's `Inputs to Spec Kit` section as the canonical source for `/speckit.specify`.
+        - [ ] Run `/speckit.clarify` if required.
+        - [ ] Run `/speckit.plan` after the feature behavior is specified.
+        - [ ] Run `/speckit.tasks` after the implementation plan is accepted.
+        - [ ] Create GitHub Issues from the generated task list.
+        - [ ] Link generated spec, plan, tasks, and issues back to the milestone document.
